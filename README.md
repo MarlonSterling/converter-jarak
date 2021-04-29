@@ -1,2 +1,2 @@
 # converter-jarak
-Mengonversikan jarak (km, m &amp; cm )
+Mengonversikan jarak (km, m & cm )
