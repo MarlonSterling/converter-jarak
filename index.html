@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter Jarak</title>
+</head>
+<body>
+    <h1>Converter Jarak</h1>
+    <label for="inputMeter">Input Meter:</label>
+    <br>
+    <input type="number" id="inputMeter" placeholder="input Meter" 
+    oninput="jarakConverter(this.id, this.value)" 
+    onchange="jarakConverter(this.id, this.value)">
+    
+    <br>
+    <label for="inputKm">Input Kilometer:</label>
+    <br>
+    <input type="number" id="inputKm" placeholder="input Kilometer" 
+    oninput="jarakConverter(this.id, this.value)" 
+    onchange="jarakConverter(this.id, this.value)">
+
+    <br>
+    <label for="inputCm">Input Centimeter:</label>
+    <br>
+    <input type="number" id="inputCm" placeholder="input Centimeter" 
+    oninput="jarakConverter(this.id, this.value)" 
+    onchange="jarakConverter(this.id, this.value)">
+
+
+    <script>
+        function jarakConverter(source,value){
+            value = parseFloat(value);
+            var inputKm = document.getElementById("inputKm")
+            var inputCm = document.getElementById("inputCm")
+            var inputMeter = document.getElementById("inputMeter")
+            
+            if (source == "inputMeter") {
+                inputMeter.value = value ;
+                inputCm.value = value * 100;
+                inputKm.value = value / 1000;
+            }
+            if (source == "inputKm") {
+                inputKm.value = value ;
+                inputCm.value = value * 100000;
+                inputMeter.value = value * 1000;
+            }
+            if (source == "inputCm") {
+                inputCm.value = value ;
+                inputKm.value = value / 100000;
+                inputMeter.value = value / 100;
+            }
+
+        }
+    </script>
+</body>
+</html>
