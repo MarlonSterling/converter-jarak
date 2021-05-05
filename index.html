@@ -5,29 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Converter Jarak</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Converter Jarak</h1>
-    <label for="inputMeter">Input Meter:</label>
-    <br>
-    <input type="number" id="inputMeter" placeholder="input Meter" 
-    oninput="jarakConverter(this.id, this.value)" 
-    onchange="jarakConverter(this.id, this.value)">
     
-    <br>
-    <label for="inputKm">Input Kilometer:</label>
-    <br>
-    <input type="number" id="inputKm" placeholder="input Kilometer" 
-    oninput="jarakConverter(this.id, this.value)" 
-    onchange="jarakConverter(this.id, this.value)">
+    <div class = "inputMeter">
+        <label for="inputMeter">Input Meter:</label>
+        <br>
+        <input type="number" id="inputMeter" placeholder="input Meter" 
+        oninput="jarakConverter(this.id, this.value)" 
+        onchange="jarakConverter(this.id, this.value)">
+    </div>
 
-    <br>
-    <label for="inputCm">Input Centimeter:</label>
-    <br>
-    <input type="number" id="inputCm" placeholder="input Centimeter" 
-    oninput="jarakConverter(this.id, this.value)" 
-    onchange="jarakConverter(this.id, this.value)">
+    <div class = "inputKm">
+        <label for="inputKm">Input Kilometer:</label>
+        <br>
+        <input type="number" id="inputKm" placeholder="input Kilometer" 
+        oninput="jarakConverter(this.id, this.value)" 
+        onchange="jarakConverter(this.id, this.value)">
+    </div>
 
+    <div class = "inputCm">
+        <label for="inputCm">Input Centimeter:</label>
+        <br>
+        <input type="number" id="inputCm" placeholder="input Centimeter" 
+        oninput="jarakConverter(this.id, this.value)" 
+        onchange="jarakConverter(this.id, this.value)">
+    </div>
 
     <script>
         function jarakConverter(source,value){
